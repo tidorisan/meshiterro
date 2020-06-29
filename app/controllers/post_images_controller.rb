@@ -9,8 +9,10 @@ class PostImagesController < ApplicationController
     	 redirect_to post_images_path
     end
     def index
+    	@post_images = PostImage.all
     end
     def show
+    	@post_image = PostImage.find(params[:id])
     end
     # 投稿データのストロングパラメータ
     private
